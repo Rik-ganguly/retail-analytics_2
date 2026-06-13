@@ -23,7 +23,7 @@ st.set_page_config(
 # ================================
 @st.cache_data
 def load_data():
-    df = pd.read_excel('data/4877028-Retail_Sales_Data.xlsx')
+    df = pd.read_csv('data/sales_data.csv')
     df['Date'] = pd.to_datetime(df['Date'])
     df['Year'] = df['Date'].dt.year
     df['Month'] = df['Date'].dt.month
